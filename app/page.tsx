@@ -1,10 +1,11 @@
 'use client';
 
-import bg from '@/assets/happy-jumping.png';
+import bg from '@/assets/happy-jumping-2.png';
 import handPng from '@/assets/handing.png';
-import manPng from '@/assets/man.png';
-import envelopTablePng from '@/assets/envelope-table.png';
+// import generatingQrPng from '@/assets/envelope-table.png';
 import womenWritingPng from '@/assets/women-writing.png';
+import recordPng from '@/assets/record.png';
+import generatingQrPng from '@/assets/generating-qr-2.png';
 
 export default function Home() {
   return (
@@ -22,11 +23,11 @@ export default function Home() {
       </div>
       <section
         style={{
-          background: `linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url(${bg.src}) no-repeat`,
+          background: `linear-gradient(to right, rgba(0, 0, 0, .88), rgba(0, 0, 0, .88)), url(${bg.src}) no-repeat`,
           backgroundSize: 'cover',
         }}
       >
-        <div className="backdrop-blur-[12px] h-screen flex justify-center flex-col items-center">
+        <div className="backdrop-blur-[8px] h-screen flex justify-center flex-col items-center">
           <div className="py-8 px-4 mx-auto max-w-screen-xl text-center">
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl dark:text-white">
               Spreading positivity to the people
@@ -98,7 +99,7 @@ export default function Home() {
       <section className="w-full text-gray-900 py-16 bg-gradient-to-r from-gray-200 to-gray-100">
         <div className="lg:w-lg grid grid-cols-3 mx-auto">
           <div>
-            <img src={envelopTablePng.src} className="w-full" />
+            <img src={generatingQrPng.src} className="w-full" />
           </div>
           <div className="col-span-2 flex flex-col justify-center ml-10">
             <div className="text-5xl font-extrabold mb-8">2. Generate QR Code with a challenge</div>
@@ -129,10 +130,10 @@ export default function Home() {
       <section className="w-full text-gray-900 py-16 pb-24 bg-gradient-to-r from-gray-200 to-gray-100">
         <div className="lg:w-lg grid grid-cols-3 mx-auto">
           <div>
-            <img src={envelopTablePng.src} className="w-full" />
+            <img src={recordPng.src} className="w-full" />
           </div>
           <div className="col-span-2 flex flex-col justify-center ml-10">
-            <div className="text-5xl font-extrabold mb-8">4. Track your progress and appreciation of others</div>
+            <div className="text-5xl font-extrabold mb-8">4. Track your progress and appreciation from others</div>
             <p className="text-xl">
               Count the number of "Thank you" messages you receive and the number of people who accepted the challenge.
               All will be displayed on the app.
