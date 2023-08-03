@@ -15,14 +15,14 @@ import Navbar from '@/components/Navbar';
 export default function Home() {
   const scrollY = useScroll();
   const firstScreenRef = useRef<HTMLDivElement>(null);
-  const ref = useRef(null);
 
   const isNegativeColor = useMemo(() => {
-    if (firstScreenRef.current) {
-      const rect = firstScreenRef.current.getBoundingClientRect();
-      return scrollY > rect.height - 60;
-    }
-    return false;
+    // if (firstScreenRef.current) {
+    // const rect = firstScreenRef.current.getBoundingClientRect();
+    // return scrollY > rect.height - 60;
+    // }
+    // return false;
+    return 40 < scrollY;
   }, [scrollY]);
 
   return (
@@ -38,7 +38,7 @@ export default function Home() {
         <div className="backdrop-blur-[0] min-h-screen flex justify-around flex-col items-center">
           <div className="py-8 px-4 mx-auto max-w-screen-xl text-center pt-28">
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl dark:text-white">
-              Sharing positivity to the people
+              Sharing positivity to the world
             </h1>
             <p className="text-gray-300 mb-8 text-lg font-[300] lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">
               You may not be able to change the world but you can brighten someone's day.
@@ -79,19 +79,19 @@ export default function Home() {
               <h4 className="text-4xl font-extrabold">
                 500<span className="text-4xl font-[400]">+</span>
               </h4>
-              <span className="text-sm">qr scanned</span>
+              <span className="text-sm text-gray-300">influence</span>
             </div>
             <div className="w-[242px]">
               <h4 className="text-4xl font-extrabold">
                 100<span className="text-4xl font-[400]">+</span>
               </h4>
-              <span className="text-sm">accounts</span>
+              <span className="text-sm text-gray-300">challenges</span>
             </div>
             <div className="w-[242px]">
               <h4 className="text-4xl font-extrabold">
                 89k<span className="text-4xl font-[400]">+</span>
               </h4>
-              <span className="text-sm">messages</span>
+              <span className="text-sm text-gray-300">messages</span>
             </div>
           </div>
         </div>
@@ -118,19 +118,59 @@ export default function Home() {
       />
       <Features
         header="Track your progress and appreciation"
-        body={`Count the number of "Thank you" messages you receive and the number of people who accepted the challenge. All will be displayed on the app.`}
+        body={`Count the number of "Thank you" messages you receive and the number of people who accepted the challenge. Everything will be displayed on the app.`}
         img={recordPng.src}
         isTextLeft={false}
       />
 
-      <section className="w-full text-gray-900 py-16 pb-24 bg-gradient-to-r from-gray-200 to-gray-100">
+      <section className="w-full text-gray-800 py-20 bg-gradient-to-r from-gray-200 to-gray-100">
         <div className="lg:w-lg w-full mx-auto">
-          <div className="text-6xl font-[800] text-center">try it now</div>
+          <div className="text-4xl font-[800] mb-12">Frequently Asked Questions</div>
+          <div className="grid grid-cols-2   gap-8">
+            <FAQItem
+              question="How does it work?"
+              answer="After doing something noble for strangers, you hand them a Hero Challenge letter in the form of a calling card. The card includes a QR code that, when scanned, leads them to a hero challenge webpage, urging them to perform a heroic act to strangers or friends, just as you did for them.              "
+            />
+            <FAQItem
+              question="What is the reward?"
+              answer="Heroes are motivated by their innate desire to do good for others, not by the prospect of compensation. Their true reward stems from the profound sense of fulfillment and accomplishment they experience while striving to be a positive influence in the world. It is the satisfaction of achieving their goal of being a beacon of goodness and making a difference in people's lives that drives them forward."
+            />
+            <FAQItem
+              question="What is the purpose of the QR Code?"
+              answer="The QR Code serves to guide recipients to the hero challenge page. Whenever someone visits the page or accepts the challenge by scanning the QR code from the letter, you will be notified."
+            />
+            <FAQItem
+              question="How to start?"
+              answer="To begin, sign up on the app, generate your unique QR Code, print the Hero Challenge along with the QR Code, and then carry out acts of kindness for strangers or others."
+            />
+            <FAQItem
+              question="What will happen if the stranger didn't scan the QR Code?"
+              answer="Even if the stranger doesn't scan the QR Code, remember that your actions serve as an inspiring example. Every effort to be a positive influence is meaningful, and nothing is in vain."
+            />
+            <FAQItem
+              question="Can I share it to my friends?"
+              answer="Absolutely! Spread the Hero Challenge to your friends and inspire them to join the cause!"
+            />
+          </div>
         </div>
       </section>
-      <footer className="border-t-2 border-t-sky-700 bg-gray-900 py-6">
+      <footer className="border-t-2 border-t-gray-700 bg-gray-800 py-6">
         <div className="w-lg mx-auto">All rights reserved heroinspire.com</div>
       </footer>
+    </div>
+  );
+}
+
+interface FAQItemProps {
+  question: string;
+  answer: string;
+}
+
+function FAQItem(props: FAQItemProps) {
+  return (
+    <div>
+      <h4 className="text-2xl font-[600] text-gray-800 mb-1">{props.question}</h4>
+      <p className="text-base text-gray-500 font-[400]">{props.answer}</p>
     </div>
   );
 }
