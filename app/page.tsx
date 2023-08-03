@@ -11,6 +11,7 @@ import useDimensions from '@/helper/useDimensions';
 import useScroll from '@/hooks/useScroll';
 import { useDeferredValue, useMemo, useRef } from 'react';
 import Navbar from '@/components/Navbar';
+import FAQItem from '@/components/LandingPage/Faq';
 
 export default function Home() {
   const scrollY = useScroll();
@@ -157,20 +158,6 @@ export default function Home() {
       <footer className="border-t-2 border-t-gray-700 bg-gray-800 py-6">
         <div className="w-lg mx-auto">All rights reserved heroinspire.com</div>
       </footer>
-    </div>
-  );
-}
-
-interface FAQItemProps {
-  question: string;
-  answer: string;
-}
-
-function FAQItem(props: FAQItemProps) {
-  return (
-    <div>
-      <h4 className="text-2xl font-[600] text-gray-800 mb-1">{props.question}</h4>
-      <p className="text-base text-gray-500 font-[400]">{props.answer}</p>
     </div>
   );
 }

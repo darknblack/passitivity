@@ -14,7 +14,7 @@ const Navbar = forwardRef((props: NavbarProps, ref) => {
     <div
       ref={refElement}
       className={cx('fixed top-0 z-10 w-full border-b border-b-transparent h-[60px] transition-all', {
-        'bg-gray-100 text-gray-900 border-b border-b-gray-200': props.isNegativeColor,
+        'bg-gray-100 text-gray-900 border-b !border-b-gray-200': props.isNegativeColor,
       })}
     >
       <div className="col-md w-full sm-w mx-auto lg:w-lg flex justify-between items-center h-full">
