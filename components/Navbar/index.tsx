@@ -2,7 +2,7 @@
 
 import { forwardRef } from 'react';
 import cx from 'classNames';
-
+import Link from 'next/link';
 interface NavbarProps {
   isNegativeColor: boolean;
 }
@@ -33,9 +33,9 @@ const Navbar = forwardRef((props: NavbarProps, ref) => {
           <a href="#" className="font-medium text-base">
             About
           </a>
-          <a href="#" className="font-medium text-base">
+          <Link href="/login" className="font-medium text-base">
             Login
-          </a>
+          </Link>
         </div>
       </div>
     </div>
