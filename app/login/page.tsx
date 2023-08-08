@@ -1,9 +1,9 @@
 'use client';
 
 // import { useEffect } from 'react';
-import loginBg from '@/assets/login.png';
 import { Label, TextInput, Checkbox, Button } from 'flowbite-react';
 import { useState } from 'react';
+import signupPng from '@/assets/signup.png';
 
 export default function Account() {
   const [state, setState] = useState({
@@ -19,7 +19,7 @@ export default function Account() {
         <div
           className="w-[350px] h-[612px]"
           style={{
-            background: `url(${loginBg.src})`,
+            background: `linear-gradient(to right, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(${signupPng.src}) no-repeat`,
             backgroundSize: 'cover',
           }}
         ></div>

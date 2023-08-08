@@ -18,7 +18,9 @@ const Navbar = forwardRef((props: NavbarProps, ref) => {
       })}
     >
       <div className="col-md w-full sm-w mx-auto lg:w-lg flex justify-between items-center h-full">
-        <div className="font-[800] text-2xl">heroinspire</div>
+        <Link href="/" className="font-[800] text-2xl">
+          heroinspire
+        </Link>
         <div
           className={cx('flex items-center gap-8 text-gray-300', {
             '!text-gray-700': props.isNegativeColor,
