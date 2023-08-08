@@ -18,8 +18,8 @@ const Navbar = forwardRef((props: NavbarProps, ref) => {
       })}
     >
       <div className="col-md w-full sm-w mx-auto lg:w-lg flex justify-between items-center h-full">
-        <Link href="/" className="font-[800] text-2xl">
-          heroinspire
+        <Link href="/" className="font-[800] text-2xl tracking-tight">
+          heroinspire.
         </Link>
         <div
           className={cx('flex items-center gap-8 text-gray-300', {

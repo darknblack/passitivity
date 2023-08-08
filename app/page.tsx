@@ -124,10 +124,21 @@ export default function Home() {
         isTextLeft={false}
       />
 
+      <section className="py-20 bg-gray-100">
+        <div className="lg:w-lg w-full mx-auto text-gray-800">
+          <div className="text-4xl font-[800] mb-12 text">Testimonials</div>
+          <div className="text-base text-gray-500 font-[400]">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi eveniet aliquam nesciunt fugit iusto
+            incidunt aperiam perferendis adipisci quibusdam tempore praesentium quis, distinctio sed fuga quae odit
+            facilis! Cum, sunt.
+          </div>
+        </div>
+      </section>
+
       <section className="w-full text-gray-800 py-20 bg-gradient-to-r from-gray-200 to-gray-100">
         <div className="lg:w-lg w-full mx-auto">
           <div className="text-4xl font-[800] mb-12">Frequently Asked Questions</div>
-          <div className="grid grid-cols-2   gap-8">
+          <div className="grid grid-cols-2 gap-8">
             <FAQItem
               question="How does it work?"
               answer="After doing something noble for strangers, you hand them a Hero Challenge letter in the form of a calling card. The card includes a QR code that, when scanned, leads them to a hero challenge webpage, urging them to perform a heroic act to strangers or friends, just as you did for them.              "
