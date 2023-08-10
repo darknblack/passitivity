@@ -27,13 +27,10 @@ const Navbar = forwardRef((props: NavbarProps, ref) => {
           })}
         >
           <a href="#" className="font-medium text-base">
-            Contest
+            Challenges
           </a>
           <a href="#" className="font-medium text-base">
-            Messages
-          </a>
-          <a href="#" className="font-medium text-base">
-            About
+            Marketplace
           </a>
           <Link href="/login" className="font-medium text-base">
             Login

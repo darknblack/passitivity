@@ -124,13 +124,51 @@ export default function Home() {
         isTextLeft={false}
       />
 
-      <section className="py-20 bg-gray-100">
-        <div className="lg:w-lg w-full mx-auto text-gray-800">
-          <div className="text-4xl font-[800] mb-12 text">Testimonials</div>
-          <div className="text-base text-gray-500 font-[400]">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi eveniet aliquam nesciunt fugit iusto
-            incidunt aperiam perferendis adipisci quibusdam tempore praesentium quis, distinctio sed fuga quae odit
-            facilis! Cum, sunt.
+      <section className="py-20 bg-gray-50">
+        <div className="lg:w-lg w-full mx-auto text-gray-800 text-sm">
+          <div className="text-4xl font-[800] mb-3 text-center">Testimonials</div>
+          <div className="text-base text-gray-600 font-[400] mb-10 text-center">
+            Check out these nice things people are saying about us
+          </div>
+          <div className="grid grid-cols-3 gap-2">
+            <div className="grid gap-2">
+              <Testimonial
+                header="test"
+                body="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laborum dolores nam nemo aperiam
+                architecto maiores debitis animi, consequuntur sit quae delectus voluptatem sequi facere similique error
+                minus quaerat alias?"
+              ></Testimonial>
+              <Testimonial
+                header="test"
+                body="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laborum dolores nam nemo aperiam minus quaerat alias?"
+              ></Testimonial>
+            </div>
+            <div className="grid gap-2">
+              <Testimonial
+                header="test"
+                body="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laborum dolores nam nemo aperiam
+                architecto maiores debitis animi, consequuntur sit quae delectus voluptatem sequi facere similique error
+                minus quaerat alias?"
+              ></Testimonial>
+              <Testimonial
+                header="test"
+                body="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laborum dolores nam nemo aperiam
+              architecto maiores debitis animi, consequuntur sit quae delectus voluptatem sequi facere similique error
+              minus quaerat alias?"
+              ></Testimonial>
+            </div>
+            <div className="grid gap-2">
+              <Testimonial
+                header="test"
+                body="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laborum dolores nam nemo aperiam?"
+              ></Testimonial>
+              <Testimonial
+                header="test"
+                body="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laborum dolores nam nemo aperiam
+              architecto maiores debitis animi, consequuntur sit quae delectus voluptatem sequi facere similique error
+              minus quaerat alias?"
+              ></Testimonial>
+            </div>
           </div>
         </div>
       </section>
@@ -169,6 +207,20 @@ export default function Home() {
       <footer className="border-t-2 border-t-gray-700 bg-gray-800 py-6">
         <div className="w-lg mx-auto">All rights reserved heroinspire.com</div>
       </footer>
+    </div>
+  );
+}
+
+interface TestimonialProps {
+  header: string;
+  body: string;
+}
+
+function Testimonial(props: TestimonialProps) {
+  return (
+    <div className="p-4 rounded-lg bg-gray-100">
+      <div>{props.header}</div>
+      <div>{props.body}</div>
     </div>
   );
 }
